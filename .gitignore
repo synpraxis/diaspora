@@ -3,4 +3,4 @@ env/
 *.pyc
 *.log
 config.py
-
+*.json
