@@ -14,7 +14,8 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .ticks(10);
+    .ticks(10)
+    .tickFormat(d3.format("d"));
 
 var text = d3.select("body").append("p").text("(a) random histogram");
 var svg = d3.select("body").append("svg")

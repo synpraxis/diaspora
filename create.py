@@ -15,7 +15,7 @@ def random_values():
     elif x == 20:
       values[keys[x]] = random.sample(set([0, 1, 2, 3, 4, 5]), 3)
     else:
-      values[keys[x]] = random.choice([0, 1, 2, 3, 4])
+      values[keys[x]] = random.choice([0, 1, 2, 3])
 
   return values
 
@@ -26,12 +26,9 @@ def random_data():
 
   return d
 
-def create_json(debug=True):
+def create_json():
   with open("data.json", "w") as file:
-    if debug == True:
-      json.dump(random_data(), file, indent=2)
-    else:
-      json.dump(data, file, indent=2)
+    json.dump(random_data(), file, indent=2)
 
 if __name__ == '__main__':
   create_json()
