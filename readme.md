@@ -2,5 +2,7 @@
 
 diaspora d3 microsite & data prep env
 
-    $ python create.py
+    $ virtualenv env && source env/bin/activate
+    $ pip install -r requirements.txt
+    $ python create.py # creates json
     $ python -m SimpleHTTPServer
