@@ -7,6 +7,7 @@ def random_values():
   "wantvote","willvote","issues"]
   values = {}
   for x in xrange(0,21):
+    values["name"] = names.get_first_name() # actually it's responder id
     if x == 0 or x == 2 or x == 10 or x == 15 or x == 16:
       values[keys[x]] = random.choice([True, False])
     elif x == 1:
@@ -19,10 +20,9 @@ def random_values():
   return values
 
 def random_data():
-  d = {}
+  d = []
   for x in xrange(1,30):
-    name = names.get_first_name()
-    d[name] = random_values()
+    d.append(random_values())
 
   return d
 
